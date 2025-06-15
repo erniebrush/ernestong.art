@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(0,0,0,0.9);
+}
+
 body {
     background-color: #E6E6E6;
     font-family: "Inter";
@@ -127,6 +141,7 @@ article {
     opacity: 0;
     transition: .5s ease;
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
 }
 
 .gallery_container:hover .gallery_overlay {

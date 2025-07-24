@@ -60,6 +60,16 @@ a {
     font-weight: 800;
 }
 
+#menucheckbox {
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
+    right: 0;
+    top: 0;
+    opacity: 0.5;
+    display: none;
+}
+
 #navbar {
     width: 13rem;
     padding: 32px 32px 0 0;
@@ -233,12 +243,10 @@ footer p {
     #navlogo img {
         width: 2.5rem;
         margin: 0 0.5rem 0 0;
-        /* display: none; */
     }
     #navlogo p {
         margin: auto 0;
         font-size: 1.5rem;
-        /* font-weight: 800; */
     }
     .navlist {
     padding: 0;
@@ -275,12 +283,69 @@ footer p {
     #navbar {
         flex-direction: column;
     }
+    .navtop {
+        justify-content: space-between;
+        display: flex;
+    }
+    
+    .hamburger {
+        position: relative;
+        width: 3.5rem;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+    }
+
+    #menucheckbox:checked + .navtop .hamburger_box .top-bar {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    #menucheckbox:checked + .navtop .hamburger_box .middle-bar {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    #menucheckbox:checked + .navtop .hamburger_box .bottom-bar {
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .bar {
+        background-color: black;
+        height: 0.25rem;
+        width: 1.5rem;
+        position: absolute;
+        transition: transform 0.2s cubic-bezier(.29, -0.52, 1, 1.88), opacity 0.2s ease;
+    }
+
+    .hamburger:hover .bar {
+        background-color: #EB008B;
+    }
+
+    .top-bar {
+        margin-bottom: 1rem;
+    }
+
+    .middle-bar {
+    }
+
+    .bottom-bar {
+        margin-top: 1rem;
+    }
+
     .navlist {
         width: 100%;
         background-color: white;
         padding: 0.5rem 0 1rem;
         display: none;
     }
+
+    #menucheckbox:checked ~ .navlist {
+        display: block;
+    }
+
     .navlist ul {
         height: auto;
         display: flex;

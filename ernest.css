@@ -313,15 +313,11 @@ footer p {
     }
 
     .bar {
-        background-color: black;
+        background-color: #EB008B;
         height: 0.25rem;
         width: 1.5rem;
         position: absolute;
         transition: transform 0.2s cubic-bezier(.29, -0.52, 1, 1.88), opacity 0.2s ease;
-    }
-
-    .hamburger:hover .bar {
-        background-color: #EB008B;
     }
 
     .top-bar {

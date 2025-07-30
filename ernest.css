@@ -101,9 +101,7 @@ a {
 
 .navsocials {
     position: absolute;
-    /* outline: 2px solid #E6E6E6; */
     padding: 1rem;
-    /* border-radius: 1rem; */
     width: 13rem;
     margin-left: -16px;
 }
@@ -135,7 +133,6 @@ article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    /* margin-bottom: -16px; */
 }
 
 .gallery img {
@@ -166,7 +163,6 @@ article {
 .gallery_text {
     color: white;
     font-weight: bold;
-    /* text-shadow: 0 0 4px black; */
     position: absolute;
     bottom: 0;
     left: 0;

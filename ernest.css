@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .topdivider {
@@ -38,6 +37,8 @@ a {
 
 #container_margin {
     margin: 0 32px;
+    overflow-x: hidden;
+
 }
 
 #container {

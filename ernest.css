@@ -224,8 +224,7 @@ footer p {
         /* flex-direction: column; */
         display: block;
         padding: 3.5rem 0 0;
-        /* padding-top: 3.5rem; */
-                overflow-x: hidden;
+        overflow-x: hidden;
 
     }
     #navbar {

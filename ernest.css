@@ -37,8 +37,6 @@ a {
 
 #container_margin {
     margin: 0 32px;
-    overflow-x: hidden;
-
 }
 
 #container {
@@ -223,11 +221,18 @@ footer p {
 
 @media all and (max-width: 1023px) {
     #container {
-        flex-direction: column;
-        padding: 0;
+        /* flex-direction: column; */
+        display: block;
+        padding: 3.5rem 0 0;
+        /* padding-top: 3.5rem; */
+                overflow-x: hidden;
+
     }
     #navbar {
-        width: 100%;
+        width: 100vw;
+        /* left: 0;
+        right: 0; */
+        top: 0;
         height: 3.5rem;
         padding: 0;
         text-align: left;
@@ -272,7 +277,8 @@ footer p {
     }
     .topdivider {
         display: block;
-        margin: 3.5rem 16px 0;
+        /* margin: 3.5rem 16px 0; */
+        margin: 0 16px;
         border: 1px solid #E6E6E6;
     }
     footer {

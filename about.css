@@ -1,0 +1,10 @@
+.about {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.about_links:hover {
+    background-color: #EB008B;
+    color: white;
+    text-decoration: none;
+}

@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 
-p, a {
+/* p, a {
     font-weight: 300;
-}
+} */
 
 .topdivider {
     display: none;

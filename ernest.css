@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+p, a {
+    font-weight: 300;
+}
+
 .topdivider {
     display: none;
 }

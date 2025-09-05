@@ -132,48 +132,6 @@ article {
     text-decoration: underline;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.gallery img {
-    width: 100%;
-    display: block;
-}
-
-.gallery_container {
-    position: relative;
-    width: 100%;
-}
-
-.gallery_overlay {
-    position: absolute;
-    bottom: 0;
-    height: 50%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background: linear-gradient(0deg,rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-    pointer-events: none;
-}
-
-.gallery_container:hover .gallery_overlay {
-    opacity: 1;
-}
-
-.gallery_text {
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0.5rem;
-    width: fit-content;
-
-}
-
 footer {
     display: none;
     padding: 8px;
@@ -208,9 +166,6 @@ footer p {
 }
 
 @media all and (max-width: 1279px) {
-    .gallery {
-        gap: 8px;
-    }
     #container_margin {
     margin: 0;
     }

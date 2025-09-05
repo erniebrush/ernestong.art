@@ -75,7 +75,7 @@ a {
 }
 
 #navbar {
-    width: 13rem;
+    /* width: 13rem; */
     padding: 32px 32px 0 0;
     text-align: center;
     flex-shrink: 0;
@@ -103,10 +103,10 @@ a {
 }
 
 .navsocials {
-    position: absolute;
+    /* position: absolute; */
     padding: 1rem;
-    width: 13rem;
-    margin-left: -16px;
+    /* width: 13rem; */
+    /* margin-left: -16px; */
 }
 
 .navsocials a {

@@ -132,6 +132,21 @@ article {
     text-decoration: underline;
 }
 
+.disclaimer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.disclaimer p {
+    padding: 1rem;
+    outline: 2px solid;
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+
 footer {
     display: none;
     padding: 8px;
@@ -232,6 +247,9 @@ footer p {
     }
     article>* {
         padding: 0 16px;
+    }
+    .disclaimer{
+        padding-bottom: 1rem;
     }
     .navsocials {
         display: none;

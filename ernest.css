@@ -248,14 +248,11 @@ footer p {
     article>* {
         padding: 0 16px;
     }
-    .disclaimer{
-        padding-bottom: 1rem;
-    }
     .navsocials {
         display: none;
     }
     .topdivider {
-        display: block;
+        /* display: block; */
         /* margin: 3.5rem 16px 0; */
         margin: 0 16px;
         border: 1px solid #E6E6E6;
@@ -335,10 +332,6 @@ footer p {
     }
     .navlist a {
         text-align: center;
-    }
-
-    .disclaimer {
-        padding: 1rem 1rem 2rem;
     }
 
     footer {

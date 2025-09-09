@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
 }
 
 img::after {
@@ -39,6 +40,10 @@ img::after {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* .project_thumbnail:hover p{
+    color: #EB008B;
+} */
 
 .project_thumbnail_description {
     display: -webkit-box;

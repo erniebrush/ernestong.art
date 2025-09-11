@@ -30,6 +30,11 @@ article {
     gap: 1.5rem;
 }
 
+.fullwidth {
+    width: 100%;
+    height: auto;
+}
+
 @media all and (max-width: 1023px) {
     h2 {
         font-size: 1.25rem;

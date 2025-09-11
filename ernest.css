@@ -182,6 +182,14 @@ footer p {
     margin: 4px;
 }
 
+.inline_links {
+    text-decoration: underline;
+}
+
+.inline_links:hover {
+    color: #EB008B;
+}
+
 @media all and (max-width: 1279px) {
     #container_margin {
     margin: 0;

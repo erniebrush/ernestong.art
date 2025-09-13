@@ -18,6 +18,10 @@
 <div id="container_margin">
 <div id="container">
 
+    <!-- image zoom to fullpage on click -->
+    <div id="fullpage" onclick="this.style.display='none';">
+    </div>
+
     <section id="navbar">
         <input id="menucheckbox" type="checkbox" />
 
@@ -85,10 +89,21 @@
         </div>
         </div>
         
-        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_Cover_1920W.jpg" class="fullwidth">
-        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_SS2.jpg" class="fullwidth">
-        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_SS1.jpg" class="fullwidth">
-        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_1920H.jpg" class="fullwidth">
+        <div class="gallery_container">
+        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_Cover_1920W.jpg">
+        </div>
+
+        <div class="gallery_container">
+        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_SS2.jpg">
+        </div>
+
+        <div class="gallery_container">
+        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_SS1.jpg">
+        </div>
+
+        <div class="gallery_container">
+        <img src="gallery/Ernest_Ong_Straits_Times_Singapore_Hawker_Food_Illustrations_1920H.jpg">
+        </div>
 
     </article>
 
@@ -114,16 +129,26 @@
 </div>
 </div>
 
-<!-- image zoom to fullpage on click -->
 <script>
-function getPics() {}
 const imgs = document.querySelectorAll('.gallery_container img');
 const fullPage = document.querySelector('#fullpage');
+
 imgs.forEach(img => {
-img.addEventListener('click', function() {
-fullPage.style.backgroundImage = 'url(' + img.src + ')';
-fullPage.style.display = 'block';
-});
+    img.addEventListener('click', function() {
+        fullPage.style.backgroundImage = 'url(' + img.src + ')';
+        fullPage.style.display = 'block';
+
+        const checkImg = new Image();
+        checkImg.src = img.src;
+
+        checkImg.onload = function() {
+            if (checkImg.width > fullPage.clientWidth || checkImg.height > fullPage.clientHeight) {
+                fullPage.style.backgroundSize = 'contain';
+            } else {
+                fullPage.style.backgroundSize = 'auto';
+            }
+        };
+    });
 });
 </script>
 

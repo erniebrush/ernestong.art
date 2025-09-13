@@ -15,6 +15,10 @@
 
 <body>
 
+<!-- image zoom to fullpage on click -->
+<div id="fullpage" onclick="this.style.display='none';">
+</div>
+
 <div id="container_margin">
 <div id="container">
 
@@ -85,7 +89,9 @@
         </div>
         </div>
         
-        <img src="gallery/Ernest_Ong_Straits_Max_Maeder_3D.jpg" class="fullwidth">
+        <div class="gallery_container">
+            <img src="gallery/Ernest_Ong_Straits_Max_Maeder_3D.jpg">
+        </div>
 
     </article>
 
@@ -111,19 +117,28 @@
 </div>
 </div>
 
-<!-- image zoom to fullpage on click -->
 <script>
-function getPics() {}
 const imgs = document.querySelectorAll('.gallery_container img');
 const fullPage = document.querySelector('#fullpage');
+
 imgs.forEach(img => {
-img.addEventListener('click', function() {
-fullPage.style.backgroundImage = 'url(' + img.src + ')';
-fullPage.style.display = 'block';
-});
+    img.addEventListener('click', function() {
+        fullPage.style.backgroundImage = 'url(' + img.src + ')';
+        fullPage.style.display = 'block';
+
+        const checkImg = new Image();
+        checkImg.src = img.src;
+
+        checkImg.onload = function() {
+            if (checkImg.width > fullPage.clientWidth || checkImg.height > fullPage.clientHeight) {
+                fullPage.style.backgroundSize = 'contain';
+            } else {
+                fullPage.style.backgroundSize = 'auto';
+            }
+        };
+    });
 });
 </script>
-
 </body>
 
 </html>

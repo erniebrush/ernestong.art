@@ -4,7 +4,6 @@
 <head>
     <title>Ernest Ong Art</title>
     <link rel="stylesheet" type="text/css" href="ernest.css">
-    <link rel="stylesheet" type="text/css" href="gallery.css">
     <link rel="stylesheet" type="text/css" href="project.css">
     <link rel="icon" type="image/x-icon" href="assets/ernest_logo_magenta.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -225,16 +224,26 @@
 </div>
 </div>
 
-<!-- image zoom to fullpage on click -->
 <script>
-function getPics() {}
 const imgs = document.querySelectorAll('.gallery_container img');
 const fullPage = document.querySelector('#fullpage');
+
 imgs.forEach(img => {
-img.addEventListener('click', function() {
-fullPage.style.backgroundImage = 'url(' + img.src + ')';
-fullPage.style.display = 'block';
-});
+    img.addEventListener('click', function() {
+        fullPage.style.backgroundImage = 'url(' + img.src + ')';
+        fullPage.style.display = 'block';
+
+        const checkImg = new Image();
+        checkImg.src = img.src;
+
+        checkImg.onload = function() {
+            if (checkImg.width > fullPage.clientWidth || checkImg.height > fullPage.clientHeight) {
+                fullPage.style.backgroundSize = 'contain';
+            } else {
+                fullPage.style.backgroundSize = 'auto';
+            }
+        };
+    });
 });
 </script>
 

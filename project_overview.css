@@ -11,7 +11,7 @@
     gap: 0.75rem;
 }
 
-.project_thumbnail>img {
+.project_thumbnail img, .project_thumbnail video {
     width: 100%;
     aspect-ratio: 3 / 2;
     background-color: #F5F5F5;

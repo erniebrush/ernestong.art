@@ -11,7 +11,7 @@
     gap: 0.75rem;
 }
 
-.project_thumbnail img, .project_thumbnail video {
+.project_thumbnail img, .video_wrapper_thumbnail {
     width: 100%;
     aspect-ratio: 3 / 2;
     background-color: #F5F5F5;
@@ -21,6 +21,13 @@
     align-items: center;
     justify-content: center;
     object-fit: cover;
+}
+
+.project_thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 img::after {

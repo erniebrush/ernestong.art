@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ernest Ong Art</title>
+    <link rel="stylesheet" type="text/css" href="ernest.css">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="icon" type="image/x-icon" href="assets/ernest_logo_magenta.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font embed, inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="container_margin">
+<div id="container">
+
+    <!-- image zoom to fullpage on click -->
+    <div id="fullpage" onclick="this.style.display='none';">
+    </div>
+
+    <section id="navbar">
+        <input id="menucheckbox" type="checkbox" />
+
+        <div class="navtop">
+        <a href="index.html" class="navlogocontainer">
+            <div id="navlogo">
+                <img src="assets/ernest_logo_magenta.svg">
+                <p>Ernest Ong</p>
+            </div>
+        </a>
+
+        <label class="hamburger_box" for="menucheckbox">
+            <div class="hamburger">
+                <div class="bar top-bar"></div>
+                <div class="bar middle-bar"></div>
+                <div class="bar bottom-bar"></div>
+            </div>
+        </label>
+        </div>
+
+        <div class="navlist">
+            <ul>
+                <a href="index.html" class="nav_active">Projects</a>
+                <a href="about.html">About</a>
+            </ul>
+        </div>
+
+        <div class="navsocials">
+            <a href="https://www.instagram.com/ernestong.art/" target="_blank">
+                <img src="assets/sns_ig_g.svg">
+            </a>
+            <a href="https://www.youtube.com/@erniebrush" target="_blank">
+                <img src="assets/sns_yt_g.svg">
+            </a>
+            <a href="https://x.com/erniebrush" target="_blank">
+                <img src="assets/sns_x_g.svg">
+            </a>
+            <a href="https://www.linkedin.com/in/ernestongart/" target="_blank">
+                <img src="assets/sns_li_g.svg">
+            </a>
+
+            <p class="copyright">©2025 Ernest Ong Art</p>
+
+        </div>
+
+    </section>
+    <hr class="topdivider">
+    <article>
+
+        <div class="project_summary">
+        <div class="project_half">
+        <div class="project_title">
+            <h2>ST180 Logo Animation &lpar;The&nbsp;Straits&nbsp;Times&rpar;</h2>
+            <p class="project_type">Projects / Motion</p>
+        </div>
+        </div>
+        <div class="project_half">
+        <div class="project_description">
+            <p>
+                Animated in Adobe After Effects and exported via the LottieFiles Format for a full Vector Workflow to preserve clean edges for web use.
+                <br><br>
+                The logo, provided by client, was created to commemorate their 180th Anniversary.
+                <br><br>
+                Click <a href="https://www.straitstimes.com/multimedia/graphics/2025/01/st180/index.html" target="_blank" class="inline_links">here</a> to view the interactive web article.
+            </p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="gallery_container" style="background-color: #fcf5f0;text-align: center;">
+        <img src="project_thumbnails/Ernest_Ong_Straits_Times_ST180_Logo_Animation.gif" style="max-width: 800px;">
+        </div>
+
+    </article>
+
+    <footer>
+
+            <p>©2025 Ernest Ong Art</p>
+
+            <div class="footersocials">
+                <a href="https://www.instagram.com/ernestong.art/" target="_blank">
+                    <img src="assets/sns_ig_g.svg">
+                </a>
+                <a href="https://www.youtube.com/@erniebrush" target="_blank">
+                    <img src="assets/sns_yt_g.svg">
+                </a>
+                <a href="https://x.com/erniebrush" target="_blank">
+                    <img src="assets/sns_x_g.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/ernestongart/" target="_blank">
+                    <img src="assets/sns_li_g.svg">
+                </a>
+            </div>
+    </footer>
+</div>
+</div>
+
+<script>
+const imgs = document.querySelectorAll('.gallery_container img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+    img.addEventListener('click', function() {
+        fullPage.style.backgroundImage = 'url(' + img.src + ')';
+        fullPage.style.display = 'block';
+
+        const checkImg = new Image();
+        checkImg.src = img.src;
+
+        checkImg.onload = function() {
+            if (checkImg.width > fullPage.clientWidth || checkImg.height > fullPage.clientHeight) {
+                fullPage.style.backgroundSize = 'contain';
+            } else {
+                fullPage.style.backgroundSize = 'auto';
+            }
+        };
+    });
+});
+</script>
+
+</body>
+
+</html>

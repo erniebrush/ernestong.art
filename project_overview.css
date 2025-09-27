@@ -53,6 +53,10 @@ img::after {
     color: #EB008B;
 } */
 
+.project_thumbnail_type {
+    color: #808080;
+}
+
 .project_thumbnail_description {
     display: -webkit-box;
     -webkit-line-clamp: 3;

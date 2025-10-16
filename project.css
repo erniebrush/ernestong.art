@@ -139,6 +139,13 @@ img {
     padding: 0;
 }
 
+.grid_five {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.5rem;
+    padding: 0;
+}
+
 .mobile_break {
     display: none;
 }
@@ -192,5 +199,9 @@ img {
     }
     .mobile_break {
         display: inline;
+    }
+    .grid_five {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
     }
 }

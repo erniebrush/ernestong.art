@@ -77,6 +77,9 @@ img {
     height: auto;
     padding: 0;
     cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery_container img {

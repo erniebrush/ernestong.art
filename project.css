@@ -202,11 +202,21 @@ img {
         aspect-ratio: 3 / 4;
         object-fit: cover;
     }
-    .grid_thick {
-        /* grid-template-columns: auto; */
+    /* .grid_thick {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    } */
+    .mobile_grid_one {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .mobile_grid_two {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .mobile_grid_thin{
+        grid-gap: 2px;
     }
     .mobile_break {
         display: inline;

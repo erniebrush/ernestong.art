@@ -126,6 +126,7 @@ img {
 
 .crop_standard {
     aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .video_wrapper video {
